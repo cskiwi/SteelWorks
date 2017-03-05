@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "sw",
+  "name": "SteelWorks",
+  "description": "Some descriptive description.",
+  "version": "0.0.1",
+  "mcversion": "1.11.2",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["cskiwi"],
+  "credits": "ArcelorMittal Gent",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
