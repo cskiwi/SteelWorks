@@ -1,1 +1,6 @@
-item.cheese.name=Cheese
+item.item_cheese.name=Cheese
+
+tile.block_cheese.name=Cheese Block
+tile.block_jar.name=The jar
+
+itemGroup.tabSteelWorks=Steelworks

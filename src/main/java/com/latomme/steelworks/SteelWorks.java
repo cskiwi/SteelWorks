@@ -1,13 +1,17 @@
 package com.latomme.steelworks;
 
+import com.latomme.steelworks.init.ModBlocks;
+import com.latomme.steelworks.init.ModCrafting;
 import com.latomme.steelworks.init.ModItems;
 import com.latomme.steelworks.proxy.CommonProxy;
+import com.latomme.steelworks.tileentity.TileEntityJar;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * Created by Glenn Latomme on 3/3/2017.
@@ -21,7 +25,7 @@ public class SteelWorks {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
-    public static final CreativeTabs TAB_SW = new TabSteelWorks();
+    public static final CreativeTabs TAB_SW = new SteelWorksTab();
 
 
     @Mod.EventHandler
@@ -30,12 +34,19 @@ public class SteelWorks {
 
         ModItems.init();
         ModItems.register();
+
+        ModBlocks.init();
+        ModBlocks.register();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         System.out.println("Init");
         proxy.init();
+
+        ModCrafting.register();
+
+        GameRegistry.registerTileEntity(TileEntityJar.class, Reference.MOD_ID + "TileEntityJar");
     }
 
     @Mod.EventHandler

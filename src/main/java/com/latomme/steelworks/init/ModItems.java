@@ -2,6 +2,7 @@ package com.latomme.steelworks.init;
 
 import com.latomme.steelworks.Reference;
 import com.latomme.steelworks.items.ItemCheese;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -10,22 +11,26 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.MinecraftDummyContainer;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Glenn Latomme on 3/3/2017.
  */
 public class ModItems {
-    public static Item cheese;
+    private static List<Item> items = new ArrayList<>();
+    public static ItemCheese itemCheese;
 
     public static void init() {
-        cheese = new ItemCheese();
+        items.add(itemCheese = new ItemCheese());
     }
 
     public static void register() {
-        GameRegistry.register(cheese);
+        items.forEach(GameRegistry::register);
     }
 
     public static void registerRenders() {
-        registerRender(cheese);
+        items.forEach(ModItems::registerRender);
     }
 
     private static void registerRender(Item item) {

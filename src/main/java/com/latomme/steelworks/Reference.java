@@ -11,14 +11,37 @@ public class Reference {
 
     public static final String CLIENT_PROXY_CLASS = "com.latomme.steelworks.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "com.latomme.steelworks.proxy.ServerProxy";
+    public static final Double PIXEL_DISTANCE = 0.0625;
 
-    public static enum SteelWorksItems {
-        CHEESE("cheese", "cheese");
+    public enum SteelWorksItems {
+        CHEESE("item_cheese", "item_cheese");
 
         private String unlocalizedName;
         private String registeryName;
 
         SteelWorksItems(String unlocalizedName, String registeryName){
+            this.unlocalizedName = unlocalizedName;
+            this.registeryName = registeryName;
+        }
+
+        public String getUnlocalizedName() {
+            return unlocalizedName;
+        }
+
+        public String getRegisteryName() {
+            return registeryName;
+        }
+
+
+    }
+    public enum SteelWorksBlocks {
+        CHEESE("block_cheese", "block_cheese"),
+        JAR("block_jar", "block_jar");
+
+        private String unlocalizedName;
+        private String registeryName;
+
+        SteelWorksBlocks(String unlocalizedName, String registeryName){
             this.unlocalizedName = unlocalizedName;
             this.registeryName = registeryName;
         }
