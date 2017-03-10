@@ -13,7 +13,7 @@ public class FluidSteel extends Fluid {
                 new ResourceLocation(Reference.MOD_ID + ":" + "blocks/" + Reference.SteelWorksBlocks.STEEL.getRegisteryName() + "_still"),
                 new ResourceLocation(Reference.MOD_ID + ":" + "blocks/" + Reference.SteelWorksBlocks.STEEL.getRegisteryName() + "_flow")
         );
-        this.setViscosity(10000);
+        // this.setViscosity(10000);
     }
 }
 

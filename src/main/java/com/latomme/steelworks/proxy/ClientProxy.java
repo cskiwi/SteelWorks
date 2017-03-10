@@ -12,6 +12,12 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
  * Created by Glenn Latomme on 3/3/2017.
  */
 public class ClientProxy implements CommonProxy {
+
+    @Override
+    public void preInit() {
+        ModFluids.registerRenders();
+    }
+
     @Override
     public void init() {
         ModItems.registerRenders();

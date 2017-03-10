@@ -5,4 +5,5 @@ package com.latomme.steelworks.proxy;
  */
 public interface CommonProxy {
     public void init();
+    public void preInit();
 }

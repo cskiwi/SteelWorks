@@ -30,7 +30,6 @@ public class SteelWorks {
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println("Pre init");
 
-
         ModFluids.init();
         ModFluids.register();
 
@@ -39,6 +38,8 @@ public class SteelWorks {
 
         ModItems.init();
         ModItems.register();
+
+        proxy.preInit();
     }
 
     @Mod.EventHandler
