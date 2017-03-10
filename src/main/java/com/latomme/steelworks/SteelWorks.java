@@ -1,8 +1,6 @@
 package com.latomme.steelworks;
 
-import com.latomme.steelworks.init.ModBlocks;
-import com.latomme.steelworks.init.ModCrafting;
-import com.latomme.steelworks.init.ModItems;
+import com.latomme.steelworks.init.*;
 import com.latomme.steelworks.proxy.CommonProxy;
 import com.latomme.steelworks.tileentity.TileEntityJar;
 import net.minecraft.creativetab.CreativeTabs;
@@ -25,18 +23,22 @@ public class SteelWorks {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
-    public static final CreativeTabs TAB_SW = new SteelWorksTab();
+    public static final CreativeTabs TAB_SW = new ModTab();
 
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println("Pre init");
 
-        ModItems.init();
-        ModItems.register();
+
+        ModFluids.init();
+        ModFluids.register();
 
         ModBlocks.init();
         ModBlocks.register();
+
+        ModItems.init();
+        ModItems.register();
     }
 
     @Mod.EventHandler

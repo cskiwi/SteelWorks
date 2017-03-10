@@ -1,4 +1,4 @@
-package com.latomme.steelworks;
+package com.latomme.steelworks.init;
 
 import com.latomme.steelworks.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
@@ -8,9 +8,9 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Glenn Latomme on 3/5/2017.
  */
-public class SteelWorksTab extends CreativeTabs
+public class ModTab extends CreativeTabs
 {
-    public SteelWorksTab()
+    public ModTab()
     {
         super("tabSteelWorks");
     }

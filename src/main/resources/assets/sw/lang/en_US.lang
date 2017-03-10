@@ -2,5 +2,8 @@ item.item_cheese.name=Cheese
 
 tile.block_cheese.name=Cheese Block
 tile.block_jar.name=The jar
+tile.block_fluid_steel.name=Steel
 
 itemGroup.tabSteelWorks=Steelworks
+
+fluid.fluid_steel=Steel

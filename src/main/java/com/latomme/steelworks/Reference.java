@@ -36,7 +36,8 @@ public class Reference {
     }
     public enum SteelWorksBlocks {
         CHEESE("block_cheese", "block_cheese"),
-        JAR("block_jar", "block_jar");
+        JAR("block_jar", "block_jar"),
+        STEEL("fluid_steel", "fluid_steel");
 
         private String unlocalizedName;
         private String registeryName;
@@ -56,4 +57,6 @@ public class Reference {
 
 
     }
+
+
 }

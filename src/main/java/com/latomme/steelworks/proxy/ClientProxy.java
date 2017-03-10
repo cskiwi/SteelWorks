@@ -1,6 +1,7 @@
 package com.latomme.steelworks.proxy;
 
 import com.latomme.steelworks.init.ModBlocks;
+import com.latomme.steelworks.init.ModFluids;
 import com.latomme.steelworks.init.ModItems;
 import com.latomme.steelworks.tileentity.TileEntityJar;
 import com.latomme.steelworks.tileentity.render.RendererJar;
@@ -15,6 +16,7 @@ public class ClientProxy implements CommonProxy {
     public void init() {
         ModItems.registerRenders();
         ModBlocks.registerRenders();
+        ModFluids.registerRenders();
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityJar.class, new RendererJar());
     }

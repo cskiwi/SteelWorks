@@ -2,6 +2,7 @@ package com.latomme.steelworks.init;
 
 import com.latomme.steelworks.Reference;
 import com.latomme.steelworks.blocks.BlockCheese;
+import com.latomme.steelworks.blocks.BlockFluidSteel;
 import com.latomme.steelworks.blocks.BlockJar;
 import com.latomme.steelworks.items.ItemCheese;
 import net.minecraft.block.Block;
@@ -22,6 +23,7 @@ public class ModBlocks {
 
     public static BlockCheese blockCheese;
     public static BlockJar blockJar;
+    public static BlockFluidSteel blockFluidSteel;
 
     public ModBlocks() {
     }
@@ -29,6 +31,7 @@ public class ModBlocks {
     public static void init() {
         blocks.add(blockCheese = new BlockCheese());
         blocks.add(blockJar = new BlockJar());
+        blocks.add(blockFluidSteel = new BlockFluidSteel());
     }
 
     public static void register() {
