@@ -4,6 +4,7 @@ import com.latomme.steelworks.init.*;
 import com.latomme.steelworks.proxy.CommonProxy;
 import com.latomme.steelworks.tileentity.TileEntityJar;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -25,6 +26,9 @@ public class SteelWorks {
 
     public static final CreativeTabs TAB_SW = new ModTab();
 
+    static {
+        FluidRegistry.enableUniversalBucket();
+    }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
