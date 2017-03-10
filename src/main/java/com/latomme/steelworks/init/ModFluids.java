@@ -37,6 +37,7 @@ public class ModFluids {
     }
 
     public static void registerRenders() {
+        items.forEach(FluidRegistry::addBucketForFluid);
         items.forEach(ModFluids::registerRender);
     }
 

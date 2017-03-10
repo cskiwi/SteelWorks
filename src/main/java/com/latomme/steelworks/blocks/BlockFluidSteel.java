@@ -17,7 +17,7 @@ import net.minecraftforge.fluids.BlockFluidClassic;
  */
 public class BlockFluidSteel extends BlockFluidClassic {
     public BlockFluidSteel() {
-        super(ModFluids.fluidSteel, Material.WATER);
+        super(ModFluids.fluidSteel, Material.LAVA);
         setUnlocalizedName(Reference.SteelWorksBlocks.STEEL.getUnlocalizedName());
         setRegistryName(Reference.SteelWorksBlocks.STEEL.getRegisteryName());
         setCreativeTab(SteelWorks.TAB_SW);
