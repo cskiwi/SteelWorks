@@ -29,9 +29,4 @@ public class BlockFluidSteel extends BlockFluidClassic {
 
         }
     }
-
-    @Override
-    public EnumBlockRenderType getRenderType(IBlockState state) {
-        return EnumBlockRenderType.MODEL;
-    }
 }

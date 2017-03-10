@@ -32,24 +32,31 @@ public class ModFluids {
     }
 
     public static void register() {
+        items.forEach(ModFluids::registerFluid);
+    }
 
-        items.forEach(FluidRegistry::registerFluid);
+    private static void registerFluid(Fluid fluid) {
+        System.out.println("[FLUID] [REGISTER] - " + fluid.getName());
+        FluidRegistry.registerFluid(fluid);
+        FluidRegistry.addBucketForFluid(fluid);
     }
 
     public static void registerRenders() {
-        items.forEach(FluidRegistry::addBucketForFluid);
         items.forEach(ModFluids::registerRender);
     }
 
-    private static void registerRender(Fluid item) {
-        Item i = Item.getItemFromBlock(item.getBlock());
-        String loc = Reference.MOD_ID + ":" + item.getName();
+    private static void registerRender(Fluid fluid) {
+        System.out.println("[FLUID] [RENDER] - " + fluid.getName());
+        Item i = Item.getItemFromBlock(fluid.getBlock());
+        String loc = Reference.MOD_ID + ":fluid" ;
 
-        ModelLoader.setCustomMeshDefinition(i, stack -> new ModelResourceLocation(loc, "fluid"));
-        ModelLoader.setCustomStateMapper(item.getBlock(), new StateMapperBase() {
+        // fluid item
+        ModelLoader.setCustomMeshDefinition(i, stack -> new ModelResourceLocation(loc, fluid.getName()));
+        // fluid material
+        ModelLoader.setCustomStateMapper(fluid.getBlock(), new StateMapperBase() {
             @Override
             protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-                return new ModelResourceLocation(loc, "fluid");
+                return new ModelResourceLocation(loc, fluid.getName());
             }
         });
     }

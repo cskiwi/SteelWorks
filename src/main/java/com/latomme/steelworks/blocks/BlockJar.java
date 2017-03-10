@@ -51,6 +51,7 @@ public class BlockJar extends Block implements ITileEntityProvider {
         setUnlocalizedName(Reference.SteelWorksBlocks.JAR.getUnlocalizedName());
         setRegistryName(Reference.SteelWorksBlocks.JAR.getRegisteryName());
         setCreativeTab(SteelWorks.TAB_SW);
+
     }
 
     @Override
